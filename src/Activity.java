@@ -1,4 +1,4 @@
-public class Activity {
+public class Activity implements Comparable<Activity>{
     //Fields - Darren
     private String type;
     private float duration;
@@ -152,5 +152,22 @@ public class Activity {
         this.intensityType = msg;
     }
 
-    
+    @Override
+    public String toString() {
+        return "ACTIVITY{" +
+                "type='" + type + '\'' +
+                ", duration=" + duration +
+                ", date='" + date + '\'' +
+                ", distance=" + distance +
+                ", avgHeartRate=" + avgHeartRate +
+                ", intensity=" + intensity +
+                ", intensityType='" + intensityType + '\'' +
+                ", caloriesBurned=" + caloriesBurned +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Activity other){
+        return this.type.compareTo(other.type);
+    }
 }
