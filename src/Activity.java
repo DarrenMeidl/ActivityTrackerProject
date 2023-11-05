@@ -10,7 +10,7 @@ public class Activity implements Comparable<Activity>{
     private String intensityType;
     private float caloriesBurned;
 
-    //Full Constructor - Darren
+    //Semi-Full Constructor - Darren
     public Activity(String type, float duration, String date, float distance, float avgHeartRate) {
         this.type = type;
         this.duration = duration;

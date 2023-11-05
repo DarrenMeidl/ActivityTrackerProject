@@ -15,4 +15,7 @@ public class Activities {
     public void sort(){
         Collections.sort(activityList); //Sorts by natural ordering - Darren
     }
+    public void sortByCaloriesBurnedDescending(){
+        Collections.sort(activityList, new CaloriesBurnedDescendingComparator());
+    }
 }
