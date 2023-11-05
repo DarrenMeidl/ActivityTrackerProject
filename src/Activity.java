@@ -1,17 +1,28 @@
 public class Activity implements Comparable<Activity>{
     //Fields - Darren
     private String type;
-    private float duration;
+    private double duration;
     private String date;
-    private float distance;
-    private float avgHeartRate;
+    private double distance;
+    private double avgHeartRate;
 
-    private float intensity;
+    private double intensity;
     private String intensityType;
-    private float caloriesBurned;
+    private double caloriesBurned;
 
+    //Full Constructor - Darren
+    public Activity(String type, double duration, String date, double distance, double avgHeartRate, double intensity, String intensityType, double caloriesBurned) {
+        this.type = type;
+        this.duration = duration;
+        this.date = date;
+        this.distance = distance;
+        this.avgHeartRate = avgHeartRate;
+        this.intensity = intensity;
+        this.intensityType = intensityType;
+        this.caloriesBurned = caloriesBurned;
+    }
     //Semi-Full Constructor - Darren
-    public Activity(String type, float duration, String date, float distance, float avgHeartRate) {
+    public Activity(String type, double duration, String date, double distance, double avgHeartRate) {
         this.type = type;
         this.duration = duration;
         this.date = date;
@@ -31,25 +42,25 @@ public class Activity implements Comparable<Activity>{
     public String getType() {
         return type;
     }
-    public float getDuration() {
+    public double getDuration() {
         return duration;
     }
     public String getDate() {
         return date;
     }
-    public float getDistance() {
+    public double getDistance() {
         return distance;
     }
-    public float getAvgHeartRate() {
+    public double getAvgHeartRate() {
         return avgHeartRate;
     }
-    public float getIntensity() {
+    public double getIntensity() {
         return intensity;
     }
     public String getIntensityType(){
         return intensityType;
     }
-    public float getCaloriesBurned() {
+    public double getCaloriesBurned() {
         return caloriesBurned;
     }
 
@@ -58,25 +69,25 @@ public class Activity implements Comparable<Activity>{
     public void setType(String type) {
         this.type = type;
     }
-    public void setDuration(float duration) {
+    public void setDuration(double duration) {
         this.duration = duration;
     }
     public void setDate(String date) {
         this.date = date;
     }
-    public void setDistance(float distance) {
+    public void setDistance(double distance) {
         this.distance = distance;
     }
-    public void setAvgHeartRate(float avgHeartRate) {
+    public void setAvgHeartRate(double avgHeartRate) {
         this.avgHeartRate = avgHeartRate;
     }
-    public void setIntensity(float intensity) {
+    public void setIntensity(double intensity) {
         this.intensity = intensity;
     }
     public void setIntensityType(String intensityType){
         this.intensityType = intensityType;
     }
-    public void setCaloriesBurned(float caloriesBurned) {
+    public void setCaloriesBurned(double caloriesBurned) {
         this.caloriesBurned = caloriesBurned;
     }
 
@@ -86,11 +97,11 @@ public class Activity implements Comparable<Activity>{
 
     }
     //Calculates calories burned by multiplying intensity by duration - Darren
-    public void calculateCaloriesBurned(float intensity, float duration){
+    public void calculateCaloriesBurned(double intensity, double duration){
         this.caloriesBurned = intensity * duration;
     }
     //Calculates the Intensity type - Darren
-    public void calculateIntensityType(float intensity, String type){
+    public void calculateIntensityType(double intensity, String type){
         String msg = "NO IFs WERE CALLED";
         //If the activity type is "Swimming" go through these checks - Darren
         if (type == "Swimming"){

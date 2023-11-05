@@ -5,9 +5,14 @@ public class MainApp {
 
         test1.add(new Activity());
         test1.add(new Activity("Swimming", 1, "03/11/2023", 50, 97));
+        test1.add(new Activity("Swimming", 1, "03/11/2023", 50, 97, 50, "Light", 90));
+        test1.add(new Activity("Swimming", 1, "03/11/2023", 50, 97, 50, "Light", 100));
 
-        System.out.println(test1.toString());
+        System.out.println("BEFORE");
+        test1.printList();
         test1.sortByCaloriesBurnedDescending();
-        System.out.println(test1.toString());
+        System.out.println("");
+        System.out.println("AFTER");
+        test1.printList();
     }
 }
